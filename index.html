@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- MANIFEST.APPCACHE WAS USED FOR CACHING ASSETS FOR OFFLINE USE (NOW DEPRECTAED) USE PWA VIA MANFIEST.JSON -->
 <!-- MANIFEST.JSON IS SPECIFIED IN A LINK TAG-->
-<html lang="en_US" manifest="manifest.appcache">
+<html lang="en_US" dir="ltr" manifest="manifest.appcache">
 	<head>
 		<!-- 		BASIC METADATA TAGS AND INFORMATION 		-->
 		<meta name="charset" content="UTF-8" />
@@ -10,7 +10,7 @@
 		<meta name="description" content="Looking for high-quality plants for your home or office? Leafy's Green Leaves has you covered. Our wide selection of houseplants, succulents, and more is perfect for both experienced plant enthusiasts and beginners. With our expert care tips and guaranteed quality, you can trust us to help you create a beautiful indoor environment. Shop now and see why Leafy's Green Leaves is the premier provider of plants." />
 		<meta name="keywords" content="Leafy's Green Leaves, plants, houseplants, succulents, indoor plants, gardening, plant care" />
 		<link rel="stylesheet" href="styles/styles.css" type="text/css" />
-
+	
 		<!-- 		ROBOTS, CRAWLING AND INDEXING FOR SEARCH ENGINES		-->
 		<meta name="robots" content="index, follow" />
 		<meta name="googlebot" content="index, follow" />
@@ -73,6 +73,12 @@
 		<meta property="twitter:audio" content="" />
 
 		<!-- 		FAVIONS AND ICONS 			-->
+		<link rel="icon" type="image/png" href="static/favicons/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="static/favicons/favicon-32x32.png"  sizes="32x32" />
+		<link rel="apple-touch-icon" type="image/png" href="static/favicons/apple-touch-icon.png" />
+		<!-- Make sure to add an ICO favicon as a fallback for older browsers and backwards compatibility -->
+		<link rel="shortcut icon" href="static/favicons/favicon.ico" type="image/x-icon" />
+		<link rel="manifest" href="/manifest.json">
 		
 		  <!--		
 			How to set one favicon for multiple different sizes
@@ -103,12 +109,23 @@
 			Windows common sizes: square70x70, square150x150, square310x310, wide310x150
 		  -->
 
-		<link rel="icon" type="image/png" href="static/favicons/favicon-16x16.png" sizes="16x16" />
-		<link rel="icon" type="image/png" href="static/favicons/favicon-32x32.png"  sizes="32x32" />
-		<link rel="apple-touch-icon" type="image/png" href="static/favicons/apple-touch-icon.png" />
-		<!-- Make sure to add an ICO favicon as a fallback for older browsers ad backwards compatibility -->
-		<link rel="shortcut icon" href="static/favicons/favicon.ico" type="image/x-icon" />
-		<link rel="manifest" href="/manifest.json">
+
+		<!-- Links and all of the great magic you can achieve using links. 
+			(Pss, this is how Next.js also does all of their magic, through)-->
+		<link rel="author" href="https://github.com/itsOdell" />
+		<!-- v Used to fetch and cache the next targets resources in the background (low priority) -->
+		<link rel="prefetch" as="" href="" />
+		<!-- v Used to fetch and cache the next targets resource asap with a high priority -->
+		<link rel="preload" as="" href="" />
+		<!-- v Used to fetch and cache and also render the next targets resources (high bandwidth usage) -->
+		<link rel="prerender" href="" />
+		<link rel="license" href="" />
+		<link rel="help" href="" />
+		<!--v Used to indicate what the next page from the current document is -->
+		<link rel="next" href="" hreflang="en-US"/>
+		<!--v Used to indicate what the previous page from the current document is -->
+		<link rel="prev" href="" hreflang="en-US"/>
+		<link crossorigin="use-credentials" />
 
 		<!-- Base to specify where our relative paths should begin from, more information here: -->
 		<base href="/" target="_blank" />
